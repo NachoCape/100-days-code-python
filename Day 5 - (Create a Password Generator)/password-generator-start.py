@@ -11,6 +11,10 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
+
+#Hard Level - Order of characters randomised:
+#e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
 sum = nr_letters + nr_numbers + nr_symbols
 list = sum * [None]
 count = 0
@@ -39,5 +43,3 @@ while count < nr_symbols:
         continue
 for i in list:
     print(i, end="")
-#Hard Level - Order of characters randomised:
-#e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
