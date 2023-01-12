@@ -5,7 +5,7 @@ from snake import Snake
 from food import Food
 
 screen = Screen()
-screen.setup(width=600, height=600)
+screen.setup(width=400, height=400)
 screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
@@ -31,13 +31,13 @@ while dont_lose:
         snake.grew_up()
         scoreboard.increase_score()
 
-    if snake.head.xcor() > 290 or snake.head.xcor() < -290\
-        or snake.head.ycor() > 300 or snake.head.ycor() < -300:
+    if snake.head.xcor() > 190 or snake.head.xcor() < -190\
+        or snake.head.ycor() > 190 or snake.head.ycor() < -190:
         dont_lose = False
         scoreboard.game_over()
     
     for i in snake.pro_snake[1:]:
-        if snake.head.distance(i) < 10:
+        if snake.head.distance(i) < 5:
             dont_lose = False
             scoreboard.game_over()
 
